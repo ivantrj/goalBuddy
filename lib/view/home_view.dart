@@ -2,21 +2,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:goal_buddy_riverpod/data/goal.dart';
 import 'package:goal_buddy_riverpod/viewmodel/home_viewmodel.dart';
-import 'package:goal_buddy_riverpod/widgets/goal_card.dart';
 
 class HomeView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        middle: Text('Goal Tracky'),
+        middle: const Text('Goal Tracky'),
         trailing: CupertinoButton(
           onPressed: () {
             context.go('/add_goal');
           },
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
         ),
       ),
       child: Consumer(
@@ -35,7 +33,7 @@ class HomeView extends ConsumerWidget {
                   title: Text(goal.name),
                   subtitle: Text(goal.description),
                   trailing: CupertinoButton(
-                    child: Icon(Icons.delete),
+                    child: const Icon(Icons.delete),
                     onPressed: () {
                       viewModel.deleteGoal(goal);
                     },

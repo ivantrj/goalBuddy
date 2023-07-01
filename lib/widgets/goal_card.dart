@@ -4,7 +4,7 @@ import 'package:goal_buddy_riverpod/data/goal.dart';
 class GoalCard extends StatelessWidget {
   final Goal goal;
 
-  GoalCard({required this.goal});
+  const GoalCard({required this.goal});
 
   @override
   Widget build(BuildContext context) {

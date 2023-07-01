@@ -23,7 +23,7 @@ final GoRouter _router = GoRouter(
         GoRoute(
           path: 'add_goal',
           builder: (BuildContext context, GoRouterState state) {
-            return AddGoalView();
+            return const AddGoalView();
           },
         ),
       ],
